@@ -8,11 +8,44 @@
 
     <script>
         function init()  {
-            document.getElementById("name").innerHTML='Greg';
+            let me = {name: 'Greg', email: 'morrisga2000@gmail.com'}
+
+            document.getElementById("name").innerHTML=me.name;
+            document.getElementById("name").innerHTML=me.name;
+
+            // BONUS
+            var outputString = '<ul>';
+            var hobbies = ['gardening', 'hiking', 'swimming', 'reading'];
+            for (let index = 0; index < hobbies.length; index++) {
+                const element = hobbies[index];
+                outputString += '<li>' + element + '</li>'
+            }
+            outputString += '</ul>';
+            document.getElementById("hobbies").innerHTML = outputString;
         }
     </script>
+
+<style>
+
+        div {
+            width: 94%;
+            padding: 0.5em;
+            border: 1px solid purple;
+            background-color: grey;
+            border-radius: 1rem;
+            color: darkmagenta;
+            font-size: 4em;
+        }
+    
+            div#hobbies {font-weight: bold; color: darkolivegreen}
+            #name {text-align: center}
+
+        
+    </style>
 </head>
-<body onload="init">
-    <div id="name"></div>
+<body onload="init()">
+    <div id="name"><h1></h1></div>
+    <div id="hobbies"></div>    
 </body>
+
 </html>
